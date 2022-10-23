@@ -8,15 +8,15 @@ if (isset($_POST["register"])) {
         $query_result = $con->query("SELECT * FROM users WHERE username='" . $username . "'");
         $result = $query_result->fetch_row();
         if (!empty($result)) {
-            echo '<script language="javascript">';
-            echo 'alert("ЮЗЕР С ТАКИМ ИМЕНЕМ УЖЕ СОЗДАН")';
+            echo '<script>';
+            echo 'alert("Юзернэйм занят")';
             echo '</script>';
         } else {
             $password = crypt($password);
             $stmt = $con->prepare("INSERT INTO users (username, password, email) VALUES (?, ?, ?)");
             $stmt->bind_param('sss', $username, $password, $email);
             $stmt->execute();
-            echo '<script language="javascript">';
+            echo '<script>';
             echo 'window.location.replace("login.html");';
             echo '</script>';
         }
