@@ -90,7 +90,7 @@ switch ($requestMethod) {
 */ ?>
 
 
-<?php require_once '../dbconnect.php';
+<?php /*require_once '../dbconnect.php';
 $mysqli=connect();
 header('Content-Type: application/json');
 try {
@@ -194,4 +194,4 @@ function getRequest($mysqli)
 function outputStatus($status, $message)
 {
     echo '{status: ' . $status . ', message: "' . $message . '"}';
-}
+}*/
