@@ -27,10 +27,20 @@
                     <th>message</th>
                     <th>name</th>
                     <th>email</th>
+                    <th></th>
+                    <th></th>
                 </tr></thead>';
         // output data of each row
         while ($row = $result->fetch_assoc()) {
-            echo "<tbody><tr><td>" . $row["id"] . "</td><td>" . $row["service"] . "</td><td>" . $row["message"] . "</td><td>" . $row["name"] . "</td><td>" . $row["email"] . "</td></tr></tbody>";
+            echo "<tbody>
+                    <tr>
+                       <td>" . $row["id"] . "</td>
+                       <td>" . $row["service"] . "</td>
+                       <td>" . $row["message"] . "</td>
+                       <td>" . $row["name"] . "</td>
+                       <td>" . $row["email"] . "</td>
+                    </tr>
+                  </tbody>";
         }
         echo "</table>";
     } else {
