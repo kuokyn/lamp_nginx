@@ -9,7 +9,7 @@
 <div class="container text-left">
     <br><h2>Запросы</h2>
     <?php
-    $conn = new mysqli("MYSQL", "user", "toor", "appDB");
+    $conn = new mysqli("MYSQL", "user", "password", "appDB");
 
     // Check connection
     if ($conn === false) {
