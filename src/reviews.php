@@ -19,9 +19,9 @@
       <ul class="menu-list">
         <li class="menu-item"><a href="index.html" class="menu-link">Home</a></li>
         <li class="menu-item"><a href="about.html" class="menu-link">About</a></li>
-        <li class="menu-item"><a href="../private/portfolio.html" class="menu-link">Portfolio</a></li>
+        <li class="menu-item"><a href="private/portfolio.html" class="menu-link">Portfolio</a></li>
         <li class="menu-item"><a href="services.html" class="menu-link">Services</a></li>
-        <li class="menu-item"><a href="../private/contacts.php" class="menu-link">Contacts</a></li>
+        <li class="menu-item"><a href="private/contacts.php" class="menu-link">Contacts</a></li>
       </ul>
     </nav>
     <div class="menu-btn">
@@ -137,7 +137,7 @@
     </div>
   </div>
 </footer>
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
 <script type="text/javascript" src="js/autoresize.jquery.min.js"></script>
 <script>
