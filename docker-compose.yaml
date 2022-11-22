@@ -46,12 +46,16 @@ services:
       retries: 10
 
   redis:
+    container_name: REDIS
     image: redis:alpine3.16
     restart: always
     ports:
       - 6379:6379
+    depends_on:
+      - apache
 
   redis-commander:
+    container_name: REDIS-COMMANDER
     image: rediscommander/redis-commander:latest
     restart: always
     environment:

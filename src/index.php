@@ -13,15 +13,15 @@
    <header class="header" >
        <div class="container header-container" id="header">
            <a class="logo" href="index.html">
-               <img src="img/logo.svg" alt="Vika">
+               <img src="img/logo.png" alt="Vika">
            </a>
            <nav class="menu list-reset">
                <ul class="menu-list">
                    <li class="menu-item"><a href="index.html" class="menu-link">Home</a></li>
-                   <li class="menu-item"><a href="about.html" class="menu-link">About</a></li>
-                   <li class="menu-item"><a href="private/portfolio.html" class="menu-link">Portfolio</a></li>
-                   <li class="menu-item"><a href="services.html" class="menu-link">Services</a></li>
-                   <li class="menu-item"><a href="private/contacts.php" class="menu-link">Contacts</a></li>
+                   <li class="menu-item"><a href="about.php" class="menu-link">About</a></li>
+                   <li class="menu-item"><a href="portfolio.php" class="menu-link">Portfolio</a></li>
+                   <li class="menu-item"><a href="services.php" class="menu-link">Services</a></li>
+                   <li class="menu-item"><a href="contacts.php" class="menu-link">Contacts</a></li>
                </ul>
            </nav>
            <div class="menu-btn">
@@ -64,7 +64,7 @@
                     <h2 class="latest_works-title anim-items" >LATEST WORKS</h2>
                 </div>
                 <div class="latest_works-container anim-items">
-                    <a href="portfolio.html#new">
+                    <a href="portfolio.php#new">
                         <div class="latest_works-item"> 
                             <img class="latest_works-img" src="img/backgr1.png" alt="pic here">
                             <div style="padding-left: 10px;">
@@ -80,7 +80,7 @@
                             
                         </div>   
                     </a>  
-                    <a href="portfolio.html#illustrations">
+                    <a href="portfolio.php#illustrations">
                     <div class="latest_works-item">
                             <img class="latest_works-img" src="img\backgr2.png" alt="pic here">
                             <div style="padding-left: 10px;">
@@ -95,7 +95,7 @@
                         
                         </div>
                     </a> 
-                    <a href="portfolio.html#new">
+                    <a href="portfolio.php#new">
                     <div class="latest_works-item">
                         <img class="latest_works-img" src="img\backgr3.png" alt="pic here">
                         <div  style="padding-left: 10px;">
@@ -128,6 +128,6 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
-   
+    <script type="text/javascript" src="js/preferences.js"></script>
 </body>
 </html>

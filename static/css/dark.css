@@ -1,0 +1,23 @@
+:root {
+    --main-bg-color: #232323;
+    --main-color: #ffffff;
+    --btn-bg-color: #E07748;
+}
+.body, .form-select, .form-input {
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+}
+.btn {
+    background-color: var(--btn-bg-color);
+    color: var(--main-color);
+}
+::-webkit-file-upload-button {
+    background-color: var(--btn-bg-color);
+    border: none;
+    color: var(--main-color);
+}
+
+body {
+    background-color: #232323;
+    color: #ffffff;
+}

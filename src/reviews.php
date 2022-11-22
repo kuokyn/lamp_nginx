@@ -12,16 +12,16 @@
 <body>
 <header class="header">
   <div class="container header-container" id="header">
-    <a class="logo" href="index.html">
-      <img src="img/logo.svg" alt="Vika">
+    <a class="logo" href="index.php">
+      <img src="img/logo.png" alt="Vika">
     </a>
     <nav class="menu list-reset">
       <ul class="menu-list">
-        <li class="menu-item"><a href="index.html" class="menu-link">Home</a></li>
-        <li class="menu-item"><a href="about.html" class="menu-link">About</a></li>
-        <li class="menu-item"><a href="private/portfolio.html" class="menu-link">Portfolio</a></li>
-        <li class="menu-item"><a href="services.html" class="menu-link">Services</a></li>
-        <li class="menu-item"><a href="private/contacts.php" class="menu-link">Contacts</a></li>
+        <li class="menu-item"><a href="index.php" class="menu-link">Home</a></li>
+        <li class="menu-item"><a href="about.php" class="menu-link">About</a></li>
+        <li class="menu-item"><a href="portfolio.php" class="menu-link">Portfolio</a></li>
+        <li class="menu-item"><a href="services.php" class="menu-link">Services</a></li>
+        <li class="menu-item"><a href="contacts.php" class="menu-link">Contacts</a></li>
       </ul>
     </nav>
     <div class="menu-btn">
@@ -65,7 +65,7 @@
     </form>
     <?php
 
-        $conn = new mysqli("MYSQL", "user", "toor", "appDB");
+        $conn = new mysqli("MYSQL", "user", "password", "appDB");
 
         // Check connection
         if ($conn === false) {
@@ -93,7 +93,7 @@
   </section>
   <section class="contacts-section anim-items">
     <?php
-    $conn = new mysqli("MYSQL", "user", "toor", "appDB");
+    $conn = new mysqli("MYSQL", "user", "password", "appDB");
 
     // Check connection
     if ($conn === false) {
