@@ -11,6 +11,7 @@ services:
       - DB_PASSWORD=password
     container_name: APACHE
     volumes:
+      - ./php/composer.json:/var/www/composer.json
       - ./src:/var/www/html
       - ./httpd/httpd.conf:/etc/apache2/sites-enabled/000-default.conf
       - ./php/php.ini:/usr/local/etc/php/conf.d/php.ini
