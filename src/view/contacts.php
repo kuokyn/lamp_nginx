@@ -12,16 +12,16 @@
 <body>
 <header class="header">
     <div class="container header-container" id="header">
-        <a class="logo" href="index.php">
+        <a class="logo" href="/">
             <img src="img/logo.png" alt="Vika">
         </a>
         <nav class="menu list-reset">
             <ul class="menu-list">
-                <li class="menu-item"><a href="index.php" class="menu-link">Home</a></li>
-                <li class="menu-item"><a href="about.php" class="menu-link">About</a></li>
-                <li class="menu-item"><a href="portfolio.php" class="menu-link">Portfolio</a></li>
-                <li class="menu-item"><a href="services.php" class="menu-link">Services</a></li>
-                <li class="menu-item"><a href="contacts.php" class="menu-link">Contacts</a></li>
+                <li class="menu-item"><a href="/" class="menu-link">Home</a></li>
+                <li class="menu-item"><a href="/about" class="menu-link">About</a></li>
+                <li class="menu-item"><a href="/portfolio" class="menu-link">Portfolio</a></li>
+                <li class="menu-item"><a href="/services" class="menu-link">Services</a></li>
+                <li class="menu-item"><a href="/contacts" class="menu-link">Contacts</a></li>
             </ul>
         </nav>
         <div class="menu-btn">
@@ -44,7 +44,8 @@
 <section class="contacts-subtitle anim-items">Have a question or want to work together?</section>
 <div class=" container form-container">
     <section id="form" class="form-section anim-items">
-        <form class="form" action="contacts.php" method="post">
+        <form class="form" action="/contacts" method="POST">
+            <input type="hidden" name="action" value="create" required>
             <div class="field">
                 <input type="text" id="name" name="name" placeholder="Your name" required>
             </div>
@@ -66,34 +67,6 @@
             </div>
             <input type="submit" id="submitBtn" value="Send Message">
         </form>
-        <?php
-
-        $conn = new mysqli("MYSQL", "user", "password", "appDB");
-
-        // Check connection
-        if ($conn === false) {
-            die("ERROR: Could not connect. "
-                . mysqli_connect_error());
-        }
-
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $service = $_POST['service'];
-        $message = $_POST['message'];
-
-        if ($name =="" || $email =="" || $service =="" || $message =="") {
-            mysqli_close($conn);
-        } else {
-            $sql = "INSERT INTO requests (name, email, service, message) VALUES ('$name','$email','$service','$message')";
-            $result = mysqli_query($conn, $sql);
-            if (!$result) {
-                echo "ERROR: Hush! Sorry $sql. "
-                    . mysqli_error($conn);
-            }
-            mysqli_close($conn);
-        }
-
-        ?>
     </section>
     <section class="contacts-section anim-items">
         <div class="contacts">

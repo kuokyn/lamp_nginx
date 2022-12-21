@@ -12,16 +12,16 @@
 <body>
 <header class="header">
   <div class="container header-container" id="header">
-    <a class="logo" href="index.php">
+    <a class="logo" href="/">
       <img src="img/logo.png" alt="Vika">
     </a>
     <nav class="menu list-reset">
       <ul class="menu-list">
-        <li class="menu-item"><a href="index.php" class="menu-link">Home</a></li>
-        <li class="menu-item"><a href="about.php" class="menu-link">About</a></li>
-        <li class="menu-item"><a href="portfolio.php" class="menu-link">Portfolio</a></li>
-        <li class="menu-item"><a href="services.php" class="menu-link">Services</a></li>
-        <li class="menu-item"><a href="contacts.php" class="menu-link">Contacts</a></li>
+        <li class="menu-item"><a href="/index" class="menu-link">Home</a></li>
+        <li class="menu-item"><a href="/about" class="menu-link">About</a></li>
+        <li class="menu-item"><a href="/portfolio" class="menu-link">Portfolio</a></li>
+        <li class="menu-item"><a href="/services" class="menu-link">Services</a></li>
+        <li class="menu-item"><a href="/contacts" class="menu-link">Contacts</a></li>
       </ul>
     </nav>
     <div class="menu-btn">
@@ -44,7 +44,8 @@
 <section class="contacts-subtitle anim-items">Please, if you are glad with my services, leave a review!</section>
 <div class=" container form-container">
   <section id="form" class="form-section anim-items">
-    <form class="form" action="reviews.php" method="post">
+    <form class="form" action="/reviews" method="POST">
+        <input type="hidden" name="action" value="create">
       <div class="field">
         <input type="text" id="name" name="name" placeholder="Your name" required>
       </div>
@@ -63,57 +64,17 @@
       </div>
       <input type="submit" id="submitBtn" value="Send Message">
     </form>
-    <?php
-
-        $conn = new mysqli("MYSQL", "user", "password", "appDB");
-
-        // Check connection
-        if ($conn === false) {
-            die("ERROR: Could not connect. "
-                . mysqli_connect_error());
-        }
-
-        $name = $_POST['name'];
-        $service = $_POST['service'];
-        $message = $_POST['message'];
-
-        if ($name =="" || $service =="" || $message =="") {
-            mysqli_close($conn);
-        } else {
-            $sql = "INSERT INTO reviews (name, service, message) VALUES ('$name','$service','$message')";
-            $result = mysqli_query($conn, $sql);
-            if (!$result) {
-                echo "ERROR: Hush! Sorry $sql. "
-                    . mysqli_error($conn);
-            }
-            mysqli_close($conn);
-        }
-
-        ?>
   </section>
   <section class="contacts-section anim-items">
     <?php
-    $conn = new mysqli("MYSQL", "user", "password", "appDB");
-
-    // Check connection
-    if ($conn === false) {
-        die("ERROR: Could not connect. "
-            . mysqli_connect_error());
-    }
-
-    $sql = "SELECT name, service, message FROM reviews";
-    $result = $conn->query($sql);
-    if ($result->num_rows > 0) {
+    if ($result) {
         echo '<table class="table table-striped">
                 <thead><tr>
                     <th>name</th>
                     <th>service</th>
                     <th>message</th>
-                    <th></th>
-                    <th></th>
                 </tr></thead>';
-        // output data of each row
-        while ($row = $result->fetch_assoc()) {
+        foreach ($result as $row) {
             echo "<tbody>
                     <tr>
                        <td>" . $row["name"] . "</td>

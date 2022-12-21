@@ -12,16 +12,16 @@
 <body>
     <header class="header">
         <div class="container header-container">
-            <a class="logo" href="index.php">
+            <a class="logo" href="/">
                 <img src="img/logo.png" alt="Logo">
             </a>
             <nav class="menu">
                 <ul class="menu-list">
-                    <li class="menu-item"><a href="index.php" class="menu-link">Home</a></li>
-                    <li class="menu-item"><a href="about.php" class="menu-link">About</a></li>
-                    <li class="menu-item"><a href="portfolio.html" class="menu-link">Portfolio</a></li>
-                    <li class="menu-item"><a href="services.php" class="menu-link">Services</a></li>
-                    <li class="menu-item"><a href="contacts.php" class="menu-link">Contacts</a></li>
+                    <li class="menu-item"><a href="/" class="menu-link">Home</a></li>
+                    <li class="menu-item"><a href="/about" class="menu-link">About</a></li>
+                    <li class="menu-item"><a href="/portfolio" class="menu-link">Portfolio</a></li>
+                    <li class="menu-item"><a href="/services" class="menu-link">Services</a></li>
+                    <li class="menu-item"><a href="/contacts" class="menu-link">Contacts</a></li>
                 </ul>
             </nav>
             <div class="menu-btn">

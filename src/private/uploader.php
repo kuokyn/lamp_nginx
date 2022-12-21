@@ -10,7 +10,7 @@ if (file_exists($target_file_name)) {
     array_push($error_message_array, 'File already exists');
 }
 
-if ($_FILES['uploading_file']['size'] > 500000) {
+if ($_FILES['uploading_file']['size'] > 5000000) {
     $error_flag = true;
     array_push($error_message_array, 'File is too heavy');
 }
